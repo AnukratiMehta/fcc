@@ -20,7 +20,7 @@ export default function App() {
 
 
   return (
-    <Router>
+    <Router basename='/fcc'>
       <div>
       <Header isAuthenticated={isAuthenticated} setIsAuthenticated={setIsAuthenticated}/>
         <Routes>
