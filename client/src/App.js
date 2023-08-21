@@ -12,11 +12,12 @@ export default function App() {
 
   useEffect(() => {
     const token = localStorage.getItem('access_token');
-    console.log('Token from localStorage:', token); // Add this line
+    console.log('Token from localStorage:', token);
+
     if (token) {
-        setIsAuthenticated(true);
+      setIsAuthenticated(true);
     }
-}, []);
+  }, []);
 
 
   return (

@@ -15,6 +15,7 @@ export default function Login({ setIsAuthenticated }) {
     const responseGoogle = (response) => {
         setIsAuthenticated(true);
         console.log(response);
+        navigate('/courses');
     };
     const errorGoogle = (error) => {
         console.log(error);
