@@ -5,7 +5,7 @@ export default function Courses() {
   const [courseData, setCourseData] = useState([]);
 
   useEffect(() => {
-    fetch('https://fcc-talentlass.glitch.me/courses/api/courses')
+    fetch('http://localhost:5001/courses/api/courses')
       .then(response => response.json())
       .then(data => setCourseData(data))
       .catch(error => console.error('Error fetching course data:', error));

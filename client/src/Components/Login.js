@@ -40,7 +40,7 @@ export default function Login({ setIsAuthenticated }) {
 
         try {
             console.log('Attempting fetch request');
-            const response = await fetch('https://fcc-talentlass.glitch.me/auth/register', {
+            const response = await fetch('http://localhost:5001/auth/register', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
