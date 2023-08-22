@@ -8,7 +8,7 @@ export default function Header({ isAuthenticated, setIsAuthenticated }) {
 
     const handleSignOut = () => {
         setIsAuthenticated(false);
-        navigate('/'); // Navigate to the logout page or handle any other necessary cleanup
+        navigate('/');
     };
 
     return (

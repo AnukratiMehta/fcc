@@ -23,9 +23,9 @@ export default function App() {
   return (
     <Router basename='/fcc'>
       <div>
-      <Header isAuthenticated={isAuthenticated} setIsAuthenticated={setIsAuthenticated}/>
+        <Header isAuthenticated={isAuthenticated} setIsAuthenticated={setIsAuthenticated} />
         <Routes>
-          <Route path="/" element={<Home isAuthenticated={isAuthenticated}/>} />
+          <Route path="/" element={<Home isAuthenticated={isAuthenticated} />} />
           <Route path="/login" element={<Login setIsAuthenticated={setIsAuthenticated} />} />
           <Route path="/logout" element={<Logout />} />
           <Route path="/courses" element={isAuthenticated ? <Courses /> : <Navigate to="/login" />} />

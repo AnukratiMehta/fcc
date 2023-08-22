@@ -4,11 +4,11 @@ import { BsMicrosoft } from 'react-icons/bs'
 import { BsSpotify } from 'react-icons/bs'
 import { AiFillAmazonCircle } from 'react-icons/ai'
 
-import { useNavigate } from 'react-router-dom'; // Import the useNavigate hook
+import { useNavigate } from 'react-router-dom';
 
 
-export default function Home({isAuthenticated}) {
-    const navigate = useNavigate(); // Get the navigation function
+export default function Home({ isAuthenticated }) {
+    const navigate = useNavigate();
 
     return (
         <div className="h-screen bg-bg flex flex-col items-center justify-center">
@@ -29,12 +29,12 @@ export default function Home({isAuthenticated}) {
                     </div>
                 </div>
                 <div className='text-center mt-5'>
-                <button
-                    onClick={() => navigate(isAuthenticated ? '/courses' : '/login')}
-                    className='bg-btn py-2 px-8 bg-gradient-to-b from-[#fecc4c] to-[#ffac33] border border-[3px] border-btn btn hover:border-[#f1a02a]'
-                >
-                    {isAuthenticated ? "Let's explore the courses!" : "Get Started - It's free"}
-                </button>
+                    <button
+                        onClick={() => navigate(isAuthenticated ? '/courses' : '/login')}
+                        className='bg-btn py-2 px-8 bg-gradient-to-b from-[#fecc4c] to-[#ffac33] border border-[3px] border-btn btn hover:border-[#f1a02a]'
+                    >
+                        {isAuthenticated ? "Let's explore the courses!" : "Get Started - It's free"}
+                    </button>
                 </div>
             </div>
         </div>

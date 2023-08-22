@@ -8,7 +8,7 @@ export default function Login({ setIsAuthenticated }) {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const [errorMessage, setErrorMessage] = useState(''); // New state for error message
+    const [errorMessage, setErrorMessage] = useState(''); 
 
     const navigate = useNavigate();
 
@@ -23,50 +23,50 @@ export default function Login({ setIsAuthenticated }) {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        
+
         if (!name || !email || !password) {
             setErrorMessage('All fields are required');
             return;
         }
 
-        // Validate password format (at least 8 characters, containing letters and numbers)
+
         const passwordRegex = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;
         if (!passwordRegex.test(password)) {
             setErrorMessage('Password must be at least 8 characters and contain both letters and numbers');
             return;
         }
 
-        console.log('Form submitted'); // Debugging statement
-    
+        console.log('Form submitted');
+
         try {
-          console.log('Attempting fetch request'); // Debugging statement
-          const response = await fetch('http://localhost:5001/auth/register', {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({ name, email, password }),
-          });
-    
-          console.log('Response received:', response); // Debugging statement
-    
-          const responseData = await response.json();
-          console.log('Response data:', responseData); // Debugging statement
-    
-          if (response.ok) {
-            const { token } = responseData;
-            localStorage.setItem('access_token', token);
-            setIsAuthenticated(true); // Update isAuthenticated status here
-            console.log('User registered successfully');
-            navigate('/courses');
-        } else {
-            console.error('Failed to register user:', responseData.message);
-            setErrorMessage(responseData.message);
+            console.log('Attempting fetch request');
+            const response = await fetch('https://fcc-talentlass.glitch.me/auth/register', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ name, email, password }),
+            });
+
+            console.log('Response received:', response);
+
+            const responseData = await response.json();
+            console.log('Response data:', responseData);
+
+            if (response.ok) {
+                const { token } = responseData;
+                localStorage.setItem('access_token', token);
+                setIsAuthenticated(true);
+                console.log('User registered successfully');
+                navigate('/courses');
+            } else {
+                console.error('Failed to register user:', responseData.message);
+                setErrorMessage(responseData.message);
+            }
+        } catch (error) {
+            console.error('Error registering user:', error);
         }
-    } catch (error) {
-        console.error('Error registering user:', error);
-    }
-      };
+    };
 
     return (
         <div className="min-h-screen bg-bg flex flex-col items-center justify-center">
@@ -108,8 +108,8 @@ export default function Login({ setIsAuthenticated }) {
 
                 </form>
                 {errorMessage && (
-                        <div className="text-red-500 text-center pt-6">{errorMessage}</div>
-                    )}
+                    <div className="text-red-500 text-center pt-6">{errorMessage}</div>
+                )}
             </div>
         </div>
     );
