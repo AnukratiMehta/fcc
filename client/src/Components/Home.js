@@ -12,11 +12,11 @@ export default function Home({isAuthenticated}) {
 
     return (
         <div className="h-screen bg-bg flex flex-col items-center justify-center">
-            <div className='w-[40%]'>
-                <div className="flex flex-col text-black text-4xl font-bold">
-                    <h1 className='py-5'>Learn to code - for free.</h1>
-                    <h1 className='py-5'>Build projects.</h1>
-                    <h1 className='py-5'>Earn certifications.</h1>
+            <div className='lg:w-[40%] md:w-[60%] w-[80%]'>
+                <div className="flex flex-col text-black md:text-4xl text-2xl font-bold">
+                    <h1 className='md:py-5 py-2'>Learn to code - for free.</h1>
+                    <h1 className='md:py-5 py-2'>Build projects.</h1>
+                    <h1 className='md:py-5 py-2'>Earn certifications.</h1>
                 </div>
                 <div >
                     <p className='py-4'>Since 2014, more than 40,000 freeCodeCamp.org graduates have gotten jobs at tech companies including:</p>
