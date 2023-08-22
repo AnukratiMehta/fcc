@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/fcc/static/css/main.5bc612f5.css",
-    "main.js": "/fcc/static/js/main.20bcd10b.js",
+    "main.js": "/fcc/static/js/main.df6203d2.js",
     "static/js/787.17c3c1ca.chunk.js": "/fcc/static/js/787.17c3c1ca.chunk.js",
     "static/media/logo.jpeg": "/fcc/static/media/logo.24e008e3eca383a1657a.jpeg",
     "index.html": "/fcc/index.html",
     "main.5bc612f5.css.map": "/fcc/static/css/main.5bc612f5.css.map",
-    "main.20bcd10b.js.map": "/fcc/static/js/main.20bcd10b.js.map",
+    "main.df6203d2.js.map": "/fcc/static/js/main.df6203d2.js.map",
     "787.17c3c1ca.chunk.js.map": "/fcc/static/js/787.17c3c1ca.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.5bc612f5.css",
-    "static/js/main.20bcd10b.js"
+    "static/js/main.df6203d2.js"
   ]
 }
