@@ -1,6 +1,6 @@
 const fetch = require('node-fetch');
 
-const url = 'http://localhost:5001/courses/add-mock-data'; // Update the URL as needed
+const url = 'http://localhost:5001/courses/add-mock-data';
 
 fetch(url, { method: 'POST' })
   .then(response => {
